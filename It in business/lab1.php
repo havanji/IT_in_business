@@ -22,3 +22,8 @@ echo ($a % $b % $c)."\n";
 echo ($a % $b ** $c)."\n";
 echo ($a ** $b % $c)."\n";
 echo ($a ** $b ** $c)."\n";
+
+
+
+
+
