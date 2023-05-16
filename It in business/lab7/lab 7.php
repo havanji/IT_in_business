@@ -74,7 +74,7 @@ class Person2{
     }
 }
 
-class ComputerProgrammer1 extends Person{
+class ComputerProgrammer1 extends Person2{
     public function introduce()
     {
         return parent::introduce() . " and I am a $this->occupation";
@@ -246,10 +246,61 @@ class ComputerProgrammer2 extends Person4{
 
 echo("Task 10")."\n";
 
+$object_oriented_php = new class(){
+    public $description = "An amazing PHP Kata Series, complete with 10 top-quality Kata containing a large number of both fixed and random tests, that teaches both the fundamentals of object-oriented programming in PHP (in the first 7 Kata of this Series) and more advanced OOP topics in PHP (in the last 3 Kata of this Series) such as interfaces, abstract classes and even anonymous classes in a way that stimulates critical thinking and encourages independent research";
+    public $kata_list = [
+        "Object-Oriented PHP #1 - Classes, Public Properties and Methods",
+        "Object-Oriented PHP #2 - Class Constructors and \$this",
+        "Object-Oriented PHP #3 - Class Constants and Static Methods",
+        "Object-Oriented PHP #4 - People, people, people (Practice)",
+        "Object-Oriented PHP #5 - Classical Inheritance",
+        "Object-Oriented PHP #6 - Visibility",
+        "Object-Oriented PHP #7 - The \"Final\" Keyword",
+        "Object-Oriented PHP #8 - Interfaces [Advanced]",
+        "Object-Oriented PHP #9 - Abstract Classes [Advanced]",
+        "Object-Oriented PHP #10 - Objects on the Fly [Advanced]"
+    ];
 
 
+    public $kata_count = 10;
+//    public $author = $donald;
 
+    public function advertise($name){
+        return "Hey $name, don't forget check out this great PHP Kata Series autorized by Donald";
+    }
 
+    public function get_kata_by_number(int $kata_number){
+        if ($kata_number = 1){
+            return "Object-Oriented PHP #1 - Classes, Public Properties and Methods";
+        }if ($kata_number = 2){
+            return "Object-Oriented PHP #2 - Class Constructors and \$this";
+        }if ($kata_number = 3){
+            return "Object-Oriented PHP #3 - Class Constants and Static Methods";
+        }if ($kata_number = 4){
+            return "Object-Oriented PHP #4 - People, people, people (Practice)";
+        }if ($kata_number = 5){
+            return "Object-Oriented PHP #5 - Classical Inheritance";
+        }if ($kata_number = 6){
+            return "Object-Oriented PHP #6 - Visibility";
+        }if ($kata_number = 7){
+            return "Object-Oriented PHP #7 - The \"Final\" Keyword";
+        }if ($kata_number = 8){
+            return "Object-Oriented PHP #8 - Interfaces [Advanced]";
+        }if ($kata_number = 9){
+            return "Object-Oriented PHP #9 - Abstract Classes [Advanced]";
+        }if ($kata_number = 10){
+            return "Object-Oriented PHP #10 - Objects on the Fly [Advanced]";
+        }else{
+            throw new InvalidArgumentException("");
+        }
+    }
+
+    public function complete(){
+        return "Hooray, I've finally completed the entire \"Object-Oriented PHP\" Kata Series!!!";
+    }
+    };
+
+$object_oriented_php = $object_oriented_php->description;
 
 
 
